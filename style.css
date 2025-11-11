@@ -3,9 +3,35 @@ body {
   font-family: Arial, sans-serif;
   margin: 20px;
   background-color: rgb(0, 0, 0);
+  color: rgb(0, 255, 0)
 }
 
 h1 {
+  background-color: rgb(0, 0, 0);
+  color: rgb(0, 255, 0);
+}
+
+h2 {
+  background-color: rgb(0, 0, 0);
+  color: rgb(0, 255, 0);
+}
+
+h3 {
+  background-color: rgb(0, 0, 0);
+  color: rgb(0, 255, 0);
+}
+
+h4 {
+  background-color: rgb(0, 0, 0);
+  color: rgb(0, 255, 0);
+}
+
+h5 {
+  background-color: rgb(0, 0, 0);
+  color: rgb(0, 255, 0);
+}
+
+h6 {
   background-color: rgb(0, 0, 0);
   color: rgb(0, 255, 0);
 }
@@ -15,6 +41,12 @@ h1 {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 15px;
+  color: rgb(0, 255, 0);
+}
+
+/* Change the background color of the container */
+strong {
+  color: #00ff00;
 }
 
 /* Item card */
@@ -42,6 +74,7 @@ h1 {
 .item-card p {
   margin: 6px 0;
   font-size: 1em;
+  color: rgb(0, 255, 0);
 }
 
 /* Out of stock — adds red line-through */
@@ -59,11 +92,14 @@ button {
   cursor: pointer;
   font-size: 0.9em;
   transition: background 0.2s ease;
+  color: rgb(0, 0, 0);
+  background-color: rgb(0, 255, 0);
 }
 
 /* Checkbox label */
 label {
   font-size: 0.85em;
+  color: rgb(0, 255, 0);
 }
 
 .total {
@@ -77,6 +113,8 @@ input[type="number"] {
   padding: 4px;
   width: 70px;
   text-align: center;
+  color: rgb(0, 255, 0);
+  background-color: rgb(0, 0, 0);
 }
 
 #floating-total {
