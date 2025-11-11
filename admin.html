@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Snoepie Admin Panel</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>WELCOME TO THE SNOEPIE ADMIN PANEL</h1>
+
+        <input id="name" type="text" placeholder="Item name">
+        <p><input id="price" type="number" placeholder="Item price"></p>
+        <button id="add_item">Add Item</button>
+
+        <h2>Current Items</h2>
+        <div id="item-list"></div>
+
+        <!-- Firebase SDKs -->
+        <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+
+         <!-- Your admin JS -->
+        <script src="admin.js"></script>
+    </body>
+</html>

@@ -1,0 +1,94 @@
+/* Basic layout */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: rgb(0, 0, 0);
+}
+
+h1 {
+  background-color: rgb(0, 0, 0);
+  color: rgb(0, 255, 0);
+}
+
+/* Item list grid */
+#item-list, #item-display {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+/* Item card */
+.item-card {
+  color: rgb(0, 255, 0);/* price color */
+  border: 1px solid rgb(0, 255, 0);/* card border color */
+  border-radius: 12px; /* card curvature */
+  padding: 12px;
+  box-shadow: 0 2px 6px rgb(0, 0, 0); /* card shadow, change the rgb(0, 0, 0) to make a color, number can only go till 255 */
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.item-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 16px rgb(255, 0, 0);
+}
+
+/* Item name and price */
+.item-card h3 {
+  margin: 0;
+  font-size: 1.2em;
+  color: rgb(0, 255, 0);
+}
+
+.item-card p {
+  margin: 6px 0;
+  font-size: 1em;
+}
+
+/* Out of stock — adds red line-through */
+.item-card.out-of-stock h3,
+.item-card.out-of-stock p {
+  text-decoration: line-through;
+  text-decoration-color: rgb(0, 255, 0);
+}
+
+/* Buttons */
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background 0.2s ease;
+}
+
+/* Checkbox label */
+label {
+  font-size: 0.85em;
+}
+
+.total {
+  font-weight: bold;
+  margin-top: 4px;
+  color: rgb(0, 255, 0);
+}
+
+input[type="number"] {
+  border-radius: 6px;
+  padding: 4px;
+  width: 70px;
+  text-align: center;
+}
+
+#floating-total {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgb(0, 0, 0);
+  border-top: 2px solid rgb(0, 0, 0)s;
+  padding: 10px;
+  font-weight: bold;
+  text-align: center;
+  z-index: 1000;
+  color: rgb(0, 255, 0);
+}
