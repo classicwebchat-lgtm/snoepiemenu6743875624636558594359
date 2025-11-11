@@ -59,22 +59,27 @@ itemsRef.on('value', (snapshot) => {
             itemDiv.style.color = item.inStock ? 'black' : 'red';
 
             itemDiv.innerHTML = `
-        <strong>${item.name}</strong> - R${item.price.toFixed(2)}
-        <label style="margin-left:10px;">
-          <input type="checkbox" ${item.inStock ? 'checked' : ''}> In stock
-        </label>
-        <button style="margin-left:10px;">Delete</button>
-      `;
+                <div id="dingdong">
+                    <h3>${item.name}</h3>
+                    <p id="admin-price">Price: R${item.price.toFixed(2)}</p>
+                    <label>
+                        <input type="checkbox" id="stock-${key}" ${item.inStock ? 'checked' : ''}>
+                        In Stock
+                    </label>
+                    <button id="delete-${key}" class="delete-btn">Delete</button>
+                <div id="dingdong">
+            `;
 
             const checkbox = itemDiv.querySelector('input[type="checkbox"]');
             const deleteButton = itemDiv.querySelector('button');
 
             // toggle stock
-            checkbox.addEventListener('change', () => {
-                database.ref('items/' + key).update({
-                    inStock: checkbox.checked
+            if (checkbox) {
+                checkbox.addEventListener('change', () => {
+                    const updatedStatus = checkbox.checked;
+                    database.ref(`items/${key}/inStock`).set(updatedStatus);
                 });
-            });
+            };
 
             // delete item
             deleteButton.addEventListener('click', () => {
